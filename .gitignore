@@ -24,3 +24,5 @@ simple_cluster-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+.project
+AWS.pem

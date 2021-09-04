@@ -5,7 +5,7 @@ defmodule SimpleCluster.MixProject do
     [
       app: :simple_cluster,
       version: "0.1.0",
-      elixir: "~> 1.12",
+      elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
