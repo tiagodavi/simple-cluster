@@ -24,13 +24,10 @@ defmodule SimpleCluster.Application do
   defp topologies do
     [
       example: [
-        strategy: Cluster.Strategy.Epmd,
+        strategy: ClusterEC2.Strategy.Tags,
         config: [
-          hosts: [
-            :"n1@3.86.111.28",
-            :"n2@35.173.213.73"
-          ]
-        ]
+          ec2_tagname: "elasticbeanstalk:environment-name"
+        ],
       ]
     ]
   end
