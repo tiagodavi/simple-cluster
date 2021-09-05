@@ -24,12 +24,12 @@ defmodule SimpleCluster.Application do
   defp topologies do
     [
       example: [
-        strategy: Cluster.Strategy.Gossip,
+        strategy: Cluster.Strategy.Epmd,
         config: [
-          port: 4369,
-          if_addr: "0.0.0.0",
-          multicast_addr: "255.255.255.255",
-          broadcast_only: true
+          hosts: [
+            :"n1@3.86.111.28",
+            :"n2@35.173.213.73"
+          ]
         ]
       ]
     ]
