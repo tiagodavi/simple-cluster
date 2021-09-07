@@ -24,7 +24,13 @@ defmodule SimpleCluster.Application do
   defp topologies do
     [
       default: [
-        strategy: Cluster.Strategy.LocalEpmd
+        strategy: Elixir.Cluster.Strategy.Gossip,
+        config: [
+          port: 45892,
+          if_addr: "0.0.0.0",
+          multicast_addr: "255.255.255.255",
+          broadcast_only: true
+        ]
       ]
     ]
   end
